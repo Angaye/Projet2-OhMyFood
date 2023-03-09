@@ -1,0 +1,22 @@
+{
+  "name": "projet2-ohmyfood",
+  "version": "1.0.0",
+  "description": "Mon projet2 openclassrooms Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Angaye/Projet2-OhMyFood.git"
+  },
+  "author": "Angaye sandrine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Angaye/Projet2-OhMyFood/issues"
+  },
+  "homepage": "https://github.com/Angaye/Projet2-OhMyFood#readme",
+  "devDependencies": {
+    "sass": "^1.58.3"
+  }
+}
