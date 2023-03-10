@@ -1,0 +1,12 @@
+.city{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding: 0.5rem;
+    gap: 1em;
+    & i{
+   font-size: 2em;
+   }
+}

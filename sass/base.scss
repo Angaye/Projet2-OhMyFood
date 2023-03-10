@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat+Alternates&family=Roboto:wght@900&family=Shrikhand&display=swap');
+p{ 
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+}
+
+*,::after,::before{
+    box-sizing: border-box;
+}
+body{
+    margin:0px ;
+    font-family: 'Roboto', sans-serif;
+
+}
+main{
+    padding: 0 1rem;
+}
