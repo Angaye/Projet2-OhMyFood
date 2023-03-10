@@ -1,24 +1,47 @@
 @use "../utils/box-shadow";
 @use "../utils/zoum";
+@use "../utils/variable";
+@use "../utils/color";
+
 
 .fonctionnement{
+    counter-reset: fonction;
     & ol{
         display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        @media (max-width:800px) {
+        gap: 2rem;
+        @media (max-width:1000px) {
             flex-direction: column;
         }
     }
     & li{
+        position: relative;
+        &::before{
+            content: counter(fonction);
+            counter-increment: fonction;
+            color: white;
+            background-color: color.$purple;
+            height: 2* variable.$base-height;
+            width: 2* variable.$base-height;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            position:absolute;
+            bottom: variable.$base-height;
+            left: -1*  variable.$base-height;
+        }
+        list-style-type: none;
         background-color: #f6f6f6;
-        padding: 1rem 2rem;
-        border: 1px solid red;
+        padding: 1.5rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
         @include box-shadow.base-shadow;
         &:hover{
            @include zoum.transform-zoum;
+    }
+    & i{
+        margin-right: 1rem;
+        color: color.$lightgrey;
+        font-size: 1.5rem;
     }
 }
  }
