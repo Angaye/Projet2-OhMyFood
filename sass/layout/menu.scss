@@ -1,0 +1,32 @@
+@use "../utils/variable";
+
+.menu{
+    background-color: #f6f6f6;
+
+    .menu-card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        @media (max-width: variable.$breakpoint) {
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+
+
+    .card{
+        &_image{
+           height: 15rem;
+           background-size: cover;
+           background-position: center;
+           border-radius: 1rem;
+        }
+        @for $i from 1 through 4{
+           &_image-#{$i} {
+                background-image: url(../../images/restaurants/menu#{$i}.jpg); 
+            }
+        }
+       
+    }
+    
+}
+ 

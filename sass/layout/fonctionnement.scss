@@ -6,6 +6,7 @@
 
 .fonctionnement{
     counter-reset: fonction;
+    margin-bottom: 2rem;
     & ol{
         display: flex;
         gap: 2rem;
@@ -26,7 +27,8 @@
             place-items: center;
             border-radius: 50%;
             position:absolute;
-            bottom: variable.$base-height;
+            bottom: 50%;
+            transform: translateY(50%);
             left: -1*  variable.$base-height;
         }
         list-style-type: none;
