@@ -1,7 +1,9 @@
 @use "../utils/variable";
+@use "../utils/color.scss";
 
 .menu{
     background-color: #f6f6f6;
+    margin-bottom: 2rem;
 
     .menu-card{
         display: grid;
@@ -9,6 +11,22 @@
         gap: 2rem;
         @media (max-width: variable.$breakpoint) {
             grid-template-columns: repeat(1,1fr);
+        }
+        .new{
+        position: relative;
+        }
+        .new::before{
+            content: "Nouveau";
+            position: absolute;
+            width: 5rem;
+            height: 2rem;
+            background-color: color.$color-tertiaire;
+            color: darken(color.$color-tertiaire, 50%);
+            display: grid;
+            place-items: center;
+            top: 1rem;
+            right: 1rem;
+
         }
     }
 
@@ -18,11 +36,28 @@
            height: 15rem;
            background-size: cover;
            background-position: center;
-           border-radius: 1rem;
+           border-radius: 1rem 1rem 0 0;
         }
         @for $i from 1 through 4{
            &_image-#{$i} {
                 background-image: url(../../images/restaurants/menu#{$i}.jpg); 
+            }
+        }
+        &_description{
+            position: relative;
+            background-color: blue;
+            p{ margin: 0.5rem;
+                
+            }
+            h3{
+                padding-top:1rem ;
+            }
+            i{
+                font-size: 2rem;
+                position: absolute;
+                right: 2rem;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
        

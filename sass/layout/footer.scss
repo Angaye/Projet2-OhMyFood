@@ -1,0 +1,15 @@
+@use "./../utils/color";
+
+footer{
+    background-color: color.$darkgey;
+    padding: 1rem 2rem;
+    color: white;
+    h2{
+        font-family: 'Shrikhand', cursive;
+        font-weight: 500;
+        padding: 1rem 0;
+    }
+    p{
+        margin: 0.2rem;
+    }
+}

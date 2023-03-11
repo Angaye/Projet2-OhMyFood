@@ -17,9 +17,24 @@ body {
 main {
   padding: 0 7rem;
 }
+@media (max-width: 1000px) {
+  main {
+    padding: 0 1rem;
+  }
+}
 
 h2 {
   padding: 2rem 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h3,
+p {
   margin: 0;
 }
 
@@ -116,6 +131,7 @@ header h1 {
 
 .menu {
   background-color: #f6f6f6;
+  margin-bottom: 2rem;
 }
 .menu .menu-card {
   display: grid;
@@ -127,11 +143,26 @@ header h1 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.menu .menu-card .new {
+  position: relative;
+}
+.menu .menu-card .new::before {
+  content: "Nouveau";
+  position: absolute;
+  width: 5rem;
+  height: 2rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  top: 1rem;
+  right: 1rem;
+}
 .menu .card_image {
   height: 15rem;
   background-size: cover;
   background-position: center;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 .menu .card_image-1 {
   background-image: url(../../images/restaurants/menu1.jpg);
@@ -144,6 +175,37 @@ header h1 {
 }
 .menu .card_image-4 {
   background-image: url(../../images/restaurants/menu4.jpg);
+}
+.menu .card_description {
+  position: relative;
+  background-color: blue;
+}
+.menu .card_description p {
+  margin: 0.5rem;
+}
+.menu .card_description h3 {
+  padding-top: 1rem;
+}
+.menu .card_description i {
+  font-size: 2rem;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+footer {
+  background-color: #353535;
+  padding: 1rem 2rem;
+  color: white;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+footer p {
+  margin: 0.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
