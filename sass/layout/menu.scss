@@ -1,6 +1,6 @@
 @use "../utils/variable";
 @use "../utils/color.scss";
-@use "../utils/linear-gradient";
+@use "../utils/mixins";
 
 .menu{
     background-color: #f6f6f6;
@@ -60,7 +60,7 @@
             }
             .fa-solid{
              color: transparent;
-             @include linear-gradient.gradient;
+             @include mixins.gradient(1);
              background-clip: text;
              -webkit-background-clip: text;
              opacity: 0;
