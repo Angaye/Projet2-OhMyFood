@@ -45,31 +45,10 @@
             }
         }
         &_description{
-            position: relative;
-            background-color: white;
-            border-radius: 0 0 1rem 1rem ;
+            
+            @include mixins.coeur-annimation;
             h3,p{
                 padding-top:0.3rem ;
-            }
-            i{
-                font-size: 2rem;
-                position: absolute;
-                right: 2rem;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            .fa-solid{
-             color: transparent;
-             @include mixins.gradient(1);
-             background-clip: text;
-             -webkit-background-clip: text;
-             opacity: 0;
-             transition: all 200ms ease-in-out;
-            }
-            &:hover .fa-solid{
-                opacity: 1;
-                transform:  translateY(-50%) scale(1.2);
-
             }
         }
        

@@ -1,0 +1,12 @@
+@use "../utils/mixins";
+
+img{
+    max-width: 100%;
+}
+.page1 { 
+    padding: 0 1rem;
+h2{
+    @include mixins.coeur-annimation;
+    font-family: 'Shrikhand', cursive;
+}
+}
