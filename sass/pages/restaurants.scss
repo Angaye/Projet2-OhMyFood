@@ -1,18 +1,116 @@
 @use "../utils/mixins";
+@use "../utils/variable";
+@use "../utils/color";
+@use "../utils/animations";
 
-.banner img{
-    width: 100%;
-    height: 70vh;
-    object-fit: cover;
-    object-position: center bottom;
-}
-.page1 { 
-    margin-top: -2rem;
 
-    h2{
-        @include mixins.coeur-annimation;
-        border-radius: 2rem 2rem 0 0;
-    font-family: 'Shrikhand', cursive;
-    padding: 2rem 2rem;
+
+body {
+    background-color: color.$lightergrey;
 }
+
+#page-resto {
+    .banner img {
+        width: 100%;
+        height: 70vh;
+        object-fit: cover;
+        object-position: center bottom;
+    }
+
+    .resto_title {
+        margin-top: -2rem;
+
+        h2 {
+            @include mixins.coeur-annimation;
+            background-color: color.$lightergrey;
+            border-radius: 2rem 2rem 0 0;
+            font-family: 'Shrikhand', cursive;
+            padding: 2rem 2rem;
+        }
+    }
+
+    .resto-main {
+        padding: 0 1rem;
+    }
+
+    .menu {
+        display: grid;
+        gap: 1rem;
+
+        @media (max-width:variable.$breakpoint) {
+            grid-template-columns: 1fr;
+
+        }
+
+        grid-template-columns: repeat(3, 1fr);
+
+        .menu_categorie {
+            text-overflow: hidden;
+            
+            .menu-items {
+                background-color: white;
+                display: flex;
+                overflow: hidden;
+                border-radius: 1rem;
+                margin: 1rem;
+                @include mixins.base-shadow;
+
+                .menu-items__prix {
+                    margin-left: auto;
+                    font-weight: 900;
+                    padding: 2rem;
+                    display: flex;
+                    align-items: flex-end;
+
+                }
+
+                .menu-items__description {
+                    padding: 1rem;
+                    overflow: hidden;
+                    h4,p{
+                        text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    }
+
+                }
+
+                .menu-items__check {
+                    display: grid;
+                    place-items: center;
+                    flex-basis: 0;
+                    border-radius: 0 1rem 1rem 0;
+                    $button-width: 4rem;
+                    background-color: color.$color-tertiaire;
+                    margin-right: -1 * $button-width;
+                    width: $button-width;
+                    transition: margin-right 0.5s;
+
+                    i {
+                        display: grid;
+                        place-items: center;
+                        background: white;
+                        width: 2rem;
+                        border-radius: 1rem;
+                        aspect-ratio: 1;
+                        color: color.$color-tertiaire;
+
+                    }
+                }
+
+                &:hover { 
+                    .menu-items__check {
+                    margin-right: 0;
+                }
+
+               i{
+                @include animations.animationcoeur;
+                 animation: animationcoeur 0.5s ease-in-out;
+               }
+            }
+
+            }
+        }
+    }
+
 }

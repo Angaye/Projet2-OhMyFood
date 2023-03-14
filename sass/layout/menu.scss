@@ -2,6 +2,7 @@
 @use "../utils/color.scss";
 @use "../utils/mixins";
 
+#homepage{ 
 .menu{
     background-color: #f6f6f6;
     margin-bottom: 2rem;
@@ -55,4 +56,4 @@
     }
     
 }
- 
+}
